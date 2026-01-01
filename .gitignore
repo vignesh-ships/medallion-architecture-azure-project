@@ -1,0 +1,38 @@
+# Azure credentials
+*.pfx
+*.publishsettings
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Databricks
+.databricks/
+*.log
+
+# dbt
+target/
+dbt_packages/
+logs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets
+*.key
+*.pem
+secrets.json
+credentials.json
+
+# Data files (if large)
+*.csv
+*.parquet

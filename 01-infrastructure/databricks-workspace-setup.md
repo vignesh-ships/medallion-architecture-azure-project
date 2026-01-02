@@ -65,3 +65,4 @@ Cluster → Libraries → Install New:
 - [ ] Workspace created and accessible
 - [ ] Cluster created with auto-termination enabled
 - [ ] Cluster starts successfully
+- [ ] Photon acceleration enabled

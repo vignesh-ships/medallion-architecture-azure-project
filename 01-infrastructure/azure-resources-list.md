@@ -28,9 +28,13 @@
   - Master orchestration pipeline
 - **Estimated Cost:** $6-12/month (based on runs)
 
-### 4. Key Vault (Optional)
-- **Purpose:** Store connection strings & secrets
-- **Decision:** Skip for now (use ADF linked service encryption)
+### 4. Key Vault
+- **Purpose:** Store connection strings & secrets (ADLS key, Databricks token)
+- **SKU:** Standard
+- **Access Model:** Azure RBAC
+- **Secrets Stored:**
+  - `adls-access-key` - Storage account access key
+  - `databricks-token` - Databricks personal access token
 - **Estimated Cost:** $1-2/month
 
 ## Total Estimated Monthly Cost

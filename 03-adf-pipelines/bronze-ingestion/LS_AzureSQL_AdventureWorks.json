@@ -1,0 +1,25 @@
+{
+    "name": "LS_AzureSQL_AdventureWorks",
+    "type": "Microsoft.DataFactory/factories/linkedservices",
+    "properties": {
+        "description": "Source database connection",
+        "annotations": [],
+        "type": "AzureSqlDatabase",
+        "typeProperties": {
+            "server": "sqlserver-medallion-dev.database.windows.net",
+            "database": "AdventureWorksLT",
+            "encrypt": "mandatory",
+            "trustServerCertificate": false,
+            "authenticationType": "SQL",
+            "userName": "sqladmin",
+            "password": {
+                "type": "AzureKeyVaultSecret",
+                "store": {
+                    "referenceName": "LS_KeyVault",
+                    "type": "LinkedServiceReference"
+                },
+                "secretName": "sql-admin-password"
+            }
+        }
+    }
+}

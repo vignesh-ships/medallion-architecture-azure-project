@@ -1,0 +1,81 @@
+{
+    "name": "PL_Silver_Transformation_All_Tables",
+    "properties": {
+        "activities": [
+            {
+                "name": "ForEach_Silver_Transformation",
+                "type": "ForEach",
+                "dependsOn": [],
+                "userProperties": [],
+                "typeProperties": {
+                    "items": {
+                        "value": "@json(pipeline().parameters.TableMappings)",
+                        "type": "Expression"
+                    },
+                    "isSequential": false,
+                    "batchCount": 5,
+                    "activities": [
+                        {
+                            "name": "Run_Silver_Job",
+                            "type": "DatabricksJob",
+                            "dependsOn": [],
+                            "policy": {
+                                "timeout": "0.12:00:00",
+                                "retry": 0,
+                                "retryIntervalInSeconds": 30,
+                                "secureOutput": false,
+                                "secureInput": false
+                            },
+                            "userProperties": [],
+                            "typeProperties": {
+                                "jobId": "341644979765208",
+                                "jobParameters": {
+                                    "source_table": {
+                                        "value": "@item().sourceTable",
+                                        "type": "Expression"
+                                    },
+                                    "target_folder": {
+                                        "value": "@item().targetFolder",
+                                        "type": "Expression"
+                                    }
+                                }
+                            },
+                            "linkedServiceName": {
+                                "referenceName": "LS_Databricks_Workspace",
+                                "type": "LinkedServiceReference"
+                            }
+                        }
+                    ]
+                }
+            }
+        ],
+        "parameters": {
+            "TableMappings": {
+                "type": "string",
+                "defaultValue": [
+                    {
+                        "sourceTable": "customer",
+                        "targetFolder": "customer"
+                    },
+                    {
+                        "sourceTable": "product",
+                        "targetFolder": "product"
+                    },
+                    {
+                        "sourceTable": "product_category",
+                        "targetFolder": "product_category"
+                    },
+                    {
+                        "sourceTable": "sales_order_header",
+                        "targetFolder": "sales_order_header"
+                    },
+                    {
+                        "sourceTable": "sales_order_detail",
+                        "targetFolder": "sales_order_detail"
+                    }
+                ]
+            }
+        },
+        "annotations": []
+    }
+}

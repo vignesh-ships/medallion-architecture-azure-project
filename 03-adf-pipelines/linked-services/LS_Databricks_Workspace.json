@@ -1,0 +1,21 @@
+{
+    "name": "LS_Databricks_Workspace",
+    "type": "Microsoft.DataFactory/factories/linkedservices",
+    "properties": {
+        "description": "Databricks workspace for transformations",
+        "annotations": [],
+        "type": "AzureDatabricks",
+        "typeProperties": {
+            "domain": "https://adb-7405614136114216.16.azuredatabricks.net",
+            "accessToken": {
+                "type": "AzureKeyVaultSecret",
+                "store": {
+                    "referenceName": "LS_KeyVault",
+                    "type": "LinkedServiceReference"
+                },
+                "secretName": "databricks-token"
+            },
+            "existingClusterId": "0101-132007-lm9vbkds"
+        }
+    }
+}

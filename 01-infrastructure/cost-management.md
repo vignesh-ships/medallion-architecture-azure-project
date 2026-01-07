@@ -60,7 +60,7 @@
 
 ### End of Project
 - [  ] Delete all resources
-- [ ] Keep documentation, delete compute resources
+- [  ] Keep documentation, delete compute resources
 - [ x ] Export pipeline JSON/notebooks before cleanup
 
 ## Emergency Cost Controls

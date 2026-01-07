@@ -62,7 +62,7 @@ Cluster → Libraries → Install New:
 - Never hardcode credentials in notebooks
 
 ## Verification
-- [x] Workspace created and accessible
-- [x] Cluster created with auto-termination enabled
-- [x] Cluster starts successfully
-- [x] Photon acceleration enabled
+- [ x ] Workspace created and accessible
+- [ x ] Cluster created with auto-termination enabled
+- [ x ] Cluster starts successfully
+- [ x ] Photon acceleration enabled

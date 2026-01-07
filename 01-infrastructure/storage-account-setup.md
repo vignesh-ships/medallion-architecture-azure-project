@@ -62,6 +62,6 @@ Store securely - needed for ADF linked service
 - Monitor access logs regularly
 
 ## Verification
-- [x] Storage account created with ADLS Gen2 enabled
-- [x] Three containers (bronze, silver, gold) created
-- [x] Access key copied and stored securely
+- [ x ] Storage account created with ADLS Gen2 enabled
+- [ x ] Three containers (bronze, silver, gold) created
+- [ x ] Access key copied and stored securely

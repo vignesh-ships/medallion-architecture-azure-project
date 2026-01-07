@@ -73,7 +73,7 @@ ADF automatically retrieves secret value
 ```
 
 ## Verification
-- [x] Key Vault created
-- [x] RBAC permissions granted (self + ADF)
-- [x] ADLS access key stored
-- [x] Databricks token stored
+- [ x ] Key Vault created
+- [ x ] RBAC permissions granted (self + ADF)
+- [ x ] ADLS access key stored
+- [ x ] Databricks token stored

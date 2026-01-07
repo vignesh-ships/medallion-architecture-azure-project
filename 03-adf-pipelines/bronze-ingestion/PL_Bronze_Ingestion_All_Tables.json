@@ -9,7 +9,7 @@
                 "userProperties": [],
                 "typeProperties": {
                     "items": {
-                        "value": "@pipeline().parameters.TableList",
+                        "value": "@json(pipeline().parameters.TableList)",
                         "type": "Expression"
                     },
                     "batchCount": 5,

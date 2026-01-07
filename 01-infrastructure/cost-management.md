@@ -50,18 +50,18 @@
 ## Cost Optimization Checklist
 
 ### Daily
-- [ ] Stop Databricks cluster after work
-- [ ] Verify no orphaned resources running
+- [x] Stop Databricks cluster after work
+- [x] Verify no orphaned resources running
 
 ### Weekly
-- [ ] Review cost analysis dashboard
-- [ ] Check budget alerts
-- [ ] Validate auto-termination settings
+- [x] Review cost analysis dashboard
+- [x] Check budget alerts
+- [x] Validate auto-termination settings
 
 ### End of Project
-- [ ] Delete all resources OR
+- [ ] Delete all resources
 - [ ] Keep documentation, delete compute resources
-- [ ] Export pipeline JSON/notebooks before cleanup
+- [x] Export pipeline JSON/notebooks before cleanup
 
 ## Emergency Cost Controls
 
@@ -82,9 +82,5 @@ If costs exceed budget:
 
 | Week | Resource | Actual Cost | Notes |
 |------|----------|-------------|-------|
-| 1    | All      | $__         | Setup |
-| 2    | All      | $__         | Dev   |
-| 3    | All      | $__         | Dev   |
-| 4    | All      | $__         | Testing |
-
-Update this table weekly for portfolio documentation.
+| 1    | All      | $0.88         | Setup |
+| 2    | All      | $4.21        | Dev/Testing |
